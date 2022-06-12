@@ -46,13 +46,19 @@ Now check to validate that you have a healthy Kubernetes environment
 kubectl get nodes
 ```
 
-These steps created a scaled down version of clusters running in kubernetes
+
+Get list of pods
+```
+kubectl get pods
+```
+
 
 2. Microservice deploymeent 
 
-Microservice will be written in python
-Install Kubernetes Python Client 
+Microservice will be written in python and must be containerized using Docker
 
-```
+- Dockerize python file and create Docker image 
+- 
 
-```
+
+
