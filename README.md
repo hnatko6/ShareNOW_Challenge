@@ -53,12 +53,28 @@ kubectl get pods
 ```
 
 
-2. Microservice deploymeent 
+3. Microservice deploymeent (Not sucessfully implemented but steps to take) 
 
-Microservice will be written in python and must be containerized using Docker
+Microservice will be written in python
 
+
+- The functions for the microservices are found in the microservice.py python file. There are three functions on this file which takes in the name of the pod as an arguement and applies different tests to evaluate if the name properly follows the designated rules. The functions returns a boolean which reflects the rule. 
 - Dockerize python file and create Docker image 
-- 
+- Use kubernetes.yaml file to deply microserivce. Run the command below
+```
+kubectl create -f deployment.yaml
+```
+- deplyoment.yaml file was also created
+- Apply kubernetes yaml file
+```
+kubectl apply -f kubernetes.yaml
+```
+
+3. Kill and clean up clusters
+
+```
+Kind delete cluster --name
+```
 
 
 
