@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pod_status
+  labels:
+    app: pod_status
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pod_status
+  template:
+    metadata:
+      labels:
+        app: pod_status
+    spec:
+      containers:
+      - name: pod_status
+        ports:
+        - containerPort: 80
